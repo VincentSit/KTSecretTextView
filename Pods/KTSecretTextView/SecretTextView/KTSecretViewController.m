@@ -386,11 +386,6 @@ UINavigationControllerDelegate
 
 #pragma mark - Event handler methods
 
-- (void)didSelectCancelButton:(UIButton*)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)didSelectDoneButton:(UIButton*)sender
 {
     // hide button before taking snapshot
@@ -406,6 +401,11 @@ UINavigationControllerDelegate
     self.backgroundInfoLabel.hidden = NO;
     self.backgroundInfoLabelBackgroundView.hidden = NO;
     
+}
+
+- (void)didSelectCancelButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didSelectPhotosButton:(UIButton*)sender
